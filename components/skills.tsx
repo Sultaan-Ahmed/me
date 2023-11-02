@@ -6,19 +6,17 @@ import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 
 const fadeInAnimationVariants = {
-  inital: {
+  initial: {
     opacity: 0,
     y: 100,
   },
-  animate: (index: number) => {
-    return {
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: 0.05 * index,
-      },
-    };
-  },
+  animate: (index: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.05 * index,
+    },
+  }),
 };
 
 const Skills = () => {
@@ -37,7 +35,7 @@ const Skills = () => {
             className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
             variants={fadeInAnimationVariants}
             initial="initial"
-            whileInView={"animate"}
+            whileInView="animate"
             viewport={{ once: true }}
             custom={index}
           >
