@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 const fadeInAnimationVariants = {
   inital: {
-    quality: 0,
     opacity: 0,
     y: 100,
   },
@@ -15,7 +14,7 @@ const fadeInAnimationVariants = {
     return {
       opacity: 1,
       y: 0,
-      transiition: {
+      transition: {
         delay: 0.05 * index,
       },
     };
